@@ -4,12 +4,16 @@
 <head>
   <meta charset="utf-8"/>
   <title>URL Manager</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link crossorigin="anonymous"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        rel="stylesheet">
 </head>
 <style>
   .list{
     margin-top: 50px;
   }
+
 </style>
 <body>
 <div class="container">
@@ -17,46 +21,53 @@
     <h2>Shorten New URL</h2>
   </div>
   <div class="row">
-    <form class="col-sm-12" action="#" method="post" th:action="@{/save}" th:object="${url}">
+    <form action="#" class="col-sm-12" method="post" th:action="@{/save}" th:object="${url}">
       <div class="form-row align-items-center">
         <div class="col-sm-6 my-1">
           <label class="sr-only" for="urlFormInput">Input Url</label>
-          <input th:field="*{originUrl}" type="text" placeholder="Input URL" id="urlFormInput" class="form-control mb-2"/>
+          <input class="form-control mb-2" id="urlFormInput" placeholder="Input URL" th:field="*{originUrl}"
+                 type="text"/>
         </div>
         <div class="col-auto my-1">
-          <button type="submit" class="btn btn-primary mb-2">Submit</button>
+          <button class="btn btn-primary mb-2" type="submit">Submit</button>
         </div>
       </div>
     </form>
   </div>
   <div class="row list">
-  <h2>Url List</h2>
+    <h2>Url List</h2>
   </div>
   <div class="row">
-  <table class="table">
-    <thead>
-    <tr>
-      <th>ID</th>
-      <th>Origin</th>
-      <th>Shortened</th>
-      <th>Count</th>
-      <th>Action</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="url : ${listUrls}">
-      <td th:text="${url.id}">ID</td>
-      <td th:text="${url.originUrl}">Origin</td>
-      <td th:text="${url.shortenCode}">Shortened</td>
-      <td th:text="${url.count}">Count</td>
-      <td> <a class="btn btn-danger" th:href="@{'/delete/' + ${url.id}}">Delete</a></td>
-    </tr>
-    </tbody>
-  </table>
+    <table class="table">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Origin</th>
+        <th>Shortened</th>
+        <th>Count</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr th:each="url : ${listUrls}">
+        <td th:text="${url.id}">ID</td>
+        <td th:text="${url.originUrl}">Origin</td>
+        <td th:text="${url.shortenCode}">Shortened</td>
+        <td th:text="${url.count}">Count</td>
+        <td><a class="btn btn-danger" th:href="@{'/delete/' + ${url.id}}">Delete</a></td>
+      </tr>
+      </tbody>
+    </table>
   </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script crossorigin="anonymous"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

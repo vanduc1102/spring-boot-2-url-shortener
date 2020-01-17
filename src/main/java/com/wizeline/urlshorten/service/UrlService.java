@@ -17,8 +17,8 @@ public class UrlService {
     return repo.findAll();
   }
 
-  public void save(URL url) {
-    repo.save(url);
+  public URL save(URL url) {
+    return repo.save(url);
   }
 
   public URL get(long id) {
