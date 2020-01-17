@@ -2,7 +2,7 @@
 
 ## Development
 
-`mvn clean spring-boot:run`
+`./mvnw clean spring-boot:run`
 
 View Application entryPoint: http://localhost:8080
 
