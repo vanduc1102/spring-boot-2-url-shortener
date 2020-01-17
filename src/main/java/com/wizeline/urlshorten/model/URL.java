@@ -1,4 +1,4 @@
-package com.wizeline.model;
+package com.wizeline.urlshorten.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

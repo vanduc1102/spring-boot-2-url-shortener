@@ -1,7 +1,7 @@
-package com.wizeline.controller;
+package com.wizeline.urlshorten.controller;
 
-import com.wizeline.model.URL;
-import com.wizeline.service.UrlService;
+import com.wizeline.urlshorten.model.URL;
+import com.wizeline.urlshorten.service.UrlService;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
