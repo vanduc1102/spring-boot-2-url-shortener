@@ -1,7 +1,7 @@
-package com.wizeline.service;
+package com.wizeline.urlshorten.service;
 
-import com.wizeline.model.URL;
-import com.wizeline.persistent.UrlRepository;
+import com.wizeline.urlshorten.model.URL;
+import com.wizeline.urlshorten.persistent.UrlRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
