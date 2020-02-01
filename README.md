@@ -17,12 +17,12 @@ when I visit some specific URL, I see a list of the short and long URL pairs in 
 
 ## Requirements
 
-1. As a User, I want to have my shortenUrl and the shortenUrl should redirect to the originalUrl ( MVP ).
-2. As a User, I want to know "How many times the shortenUrl has been used?".
-3. As a User, I want to have my own shortenCode if it is available.
+1. As a User, I want to be able to create shortenUrls and the shortenUrls should redirect to the originalUrls via the application. ( MVP ).
+2. As a User, I want to know "How many times a shortenUrl has been used?".
+3. As a User, I want to have my own shortenCodes if they are available.
 
-e.g: 
-I want to use `aapl` for `https://apple.com` and `wzl` for `https://wizeline.com`
+    e.g: 
+        I want to use `aapl` for `https://apple.com` and `wzl` for `https://wizeline.com`
 
 4. As a CoWorker, Let's discuss to improve the application at any aspect.
 
