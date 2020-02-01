@@ -24,7 +24,7 @@ when I visit some specific URL, I see a list of the short and long URL pairs in 
 e.g: 
 I want to use `aapl` for `https://apple.com` and `wzl` for `https://wizeline.com`
 
-4. As a CoWorker, Let's discuss to improve the application in any manors.
+4. As a CoWorker, Let's discuss to improve the application at any aspect.
 
 
 ## Development
