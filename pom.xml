@@ -2,7 +2,7 @@
   xmlns="http://maven.apache.org/POM/4.0.0"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
 		http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <artifactId>URLShortener</artifactId>
+  <artifactId>url-shortener</artifactId>
   <build>
     <plugins>
       <plugin>
@@ -18,9 +18,8 @@
               <groupId>org.projectlombok</groupId>
               <version>1.18.4</version>
             </path>
-          </annotationProcessorPaths> <!-- or higher, depending on your project -->
-          <source>1.8</source> <!-- or higher, depending on your project -->
-          <target>1.8</target>
+          </annotationProcessorPaths>
+          <release>${jdk.version}</release>
         </configuration>
         <groupId>org.apache.maven.plugins</groupId>
         <version>3.8.1</version>
@@ -70,8 +69,8 @@
                   <element>BUNDLE</element>
                   <limits>
                     <limit>
-                      <counter>COMPLEXITY</counter>
-                      <minimum>0.00</minimum>
+                      <counter>INSTRUCTION</counter>
+                      <minimum>0.73</minimum>
                       <value>COVEREDRATIO</value>
                     </limit>
                   </limits>
@@ -119,8 +118,8 @@
     </dependency>
     <!-- Test Libs -->
     <dependency>
-      <artifactId>spring-boot-starter-test</artifactId>
       <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -137,8 +136,9 @@
     </dependency>
   </dependencies>
   <groupId>com.wizeline</groupId>
+  <name>url-shortener</name>
   <modelVersion>4.0.0</modelVersion>
-
+  <description>Url Shortener using Spring Boot 2 and H2 DB.</description>
   <packaging>jar</packaging>
   <parent>
     <artifactId>spring-boot-starter-parent</artifactId>
@@ -147,6 +147,7 @@
   </parent>
   <properties>
     <jacoco.version>0.8.5</jacoco.version>
+    <jdk.version>11</jdk.version>
   </properties>
   <version>0.0.1-SNAPSHOT</version>
 </project>
