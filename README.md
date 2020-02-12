@@ -29,9 +29,7 @@ We have prepared a basic implementation for the application. You can submit urls
 
 ## Development
 
-Colone the repository and run the command below:
-
-`./mvnw clean spring-boot:run`
+Clone the repository and run the command: `./mvnw clean spring-boot:run`
 
 View Application entryPoint: [http://localhost:8080](http://localhost:8080)
 
