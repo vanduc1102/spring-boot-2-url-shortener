@@ -29,15 +29,16 @@ We have prepared a basic implementation for the application. You can submit urls
 
 ## Development
 
-Clone the repository and run the command: `./mvnw clean spring-boot:run`
+- Clone the repository and run the command: `./mvnw clean spring-boot:run`
 
-View Application entryPoint: [http://localhost:8080](http://localhost:8080)
+- View Application entryPoint: [http://localhost:8080](http://localhost:8080)
 
-View H2 DB: [http://localhost:8080/h2/](http://localhost:8080/h2/)
+- View H2 DB: [http://localhost:8080/h2/](http://localhost:8080/h2/)
 
+- Export your implementation as a patch:
+
+```
+git diff > your_name.patch
+```
 
 ## Good Luck!
-
-
-
-

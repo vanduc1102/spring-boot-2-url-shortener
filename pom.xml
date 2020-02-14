@@ -147,6 +147,7 @@
   </parent>
   <properties>
     <jacoco.version>0.8.5</jacoco.version>
+    <!-- <jdk.version>1.8</jdk.version> -->
     <jdk.version>11</jdk.version>
   </properties>
   <version>0.0.1-SNAPSHOT</version>

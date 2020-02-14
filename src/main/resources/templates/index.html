@@ -13,7 +13,6 @@
   .list{
     margin-top: 50px;
   }
-
 </style>
 <body>
 <div class="container">
@@ -38,7 +37,7 @@
     <h2>Url List</h2>
   </div>
   <div class="row">
-    <table class="table">
+    <table class="table table-striped">
       <thead>
       <tr>
         <th>ID</th>
@@ -50,11 +49,17 @@
       </thead>
       <tbody>
       <tr th:each="url : ${listUrls}">
-        <td th:text="${url.id}">ID</td>
-        <td th:text="${url.originUrl}">Origin</td>
-        <td th:text="${url.shortenCode}">Shortened</td>
-        <td th:text="${url.count}">Count</td>
-        <td><a class="btn btn-danger" th:href="@{'/delete/' + ${url.id}}">Delete</a></td>
+        <td th:text="${url.id}"></td>
+        <td>
+          <a target="_blank" th:href="${url.originUrl}" th:text="${url.originUrl}"></a>
+        </td>
+        <td th:text="${url.shortenCode}"></td>
+        <td th:text="${url.count}"></td>
+        <td>
+          <a class="btn btn-danger" th:href="@{'/delete/' + ${url.id}}">
+            Delete
+          </a>
+        </td>
       </tr>
       </tbody>
     </table>
